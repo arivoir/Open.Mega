@@ -1,14 +1,11 @@
-﻿using System;
+﻿namespace Open.Mega;
 
-namespace Open.Mega
+public class MegaException : Exception
 {
-    public class MegaException : Exception
+    public MegaException(int[] codes)
     {
-        public MegaException(int[] codes)
-        {
-            Codes = codes;
-        }
-
-        public int[] Codes { get; private set; }
+        Codes = codes;
     }
+
+    public int[] Codes { get; private set; }
 }
